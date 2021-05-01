@@ -37,6 +37,8 @@ export class CreateTenantComponent implements OnInit {
     error => console.log(error));
   }
 
+  
+
   goToTenantList(){
     this.router.navigate(['/tenants']);
   }
@@ -47,6 +49,10 @@ export class CreateTenantComponent implements OnInit {
   }
   onSubmit(){
     this.submitted = true;
+    this.tenantService.createTenant(this.tenant).subscribe( data =>{
+      this.goToTenantList();
+    }
+    , error => console.log(error));
     console.log(this.form);
   }
 
@@ -55,4 +61,6 @@ export class CreateTenantComponent implements OnInit {
   console.log( 'goBack()...' );
      }
 
+
+     
 }

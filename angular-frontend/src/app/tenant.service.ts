@@ -8,8 +8,6 @@ import { Tenant} from './tenant';
 })
 export class TenantService {
 
-
-
 private baseURL = "http://localhost:8080/api/v1/tenants";
 constructor(private httpClient : HttpClient) { }
 
@@ -19,10 +17,11 @@ constructor(private httpClient : HttpClient) { }
 
 
   createTenant(tenant: Tenant): Observable<Object>{
-    const headers = { 'content-type': 'application/json'}
-    const body=JSON.stringify(tenant);
-    console.log(body)
-    return this.httpClient.post(`${this.baseURL}`, body,{'headers':headers});
+    // const headers = { 'content-type': 'application/json'}
+    // const body=JSON.stringify(tenant);
+    // console.log(body)
+    // return this.httpClient.post(`${this.baseURL}`, body,{'headers':headers});
+    return this.httpClient.post(`${this.baseURL}`, tenant);
   }
 
   getTenantById(id: number): Observable<Tenant>{
@@ -33,7 +32,7 @@ constructor(private httpClient : HttpClient) { }
     return this.httpClient.put(`${this.baseURL}/${id}`, tenant);
   }
 
-  deleteTenant(id: number): Observable<Object>{
+  deleteTenant(id: number,tenant :Tenant): Observable<Object>{
     return this.httpClient.delete(`${this.baseURL}/${id}`);
   }
 }

@@ -32,10 +32,11 @@ export class TenantListComponent implements OnInit {
     }
 
     deleteTenant(id: number){
-      this.tenantService.deleteTenant(id).subscribe( data => {
-        console.log(data);
-        this.getTenants();
-      })
+      this.router.navigate(['delete-tenant',id]);
+      // this.tenantService.deleteTenant(id).subscribe( data => {
+      //   console.log(data);
+      //   this.getTenants();
+      // })
     }
 
 }

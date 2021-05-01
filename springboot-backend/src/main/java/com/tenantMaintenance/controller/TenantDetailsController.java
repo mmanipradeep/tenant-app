@@ -2,21 +2,16 @@ package com.tenantMaintenance.controller;
 
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 
 import com.tenantMaintenance.model.Tenant;
 import com.tenantMaintenance.repository.TenantDetailsRepository;
 import com.tenantMaintenance.service.TenantDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/v1/tenants")
-//@EnableAutoConfiguration
 @CrossOrigin(origins = "http://localhost:4200")
 public class TenantDetailsController {
     
@@ -41,14 +36,12 @@ public class TenantDetailsController {
 
 	@PostMapping
 	public Tenant createTenant( @RequestBody Tenant tenant) {
-
 		return tenantDetailsService.createTenant(tenant);
 	}
 	
 	// get employee by id rest api
 	@GetMapping("/tenant/{id}")
 	public ResponseEntity<Tenant> getTenantById(@PathVariable Long id) {
-
 		return tenantDetailsService.getTenantById(id);
 	}
 

@@ -20,10 +20,17 @@ public class TenantDetailsService {
     }
 
     public Tenant createTenant(Tenant tenant){
-        tenant.setStatus("A");
-        tenant.setCreatedBy("SYSTEM");
-        tenant.setCreatedDate(new Date());
-        return tenantDetailsRepository.save(tenant);
+        try{
+            tenant.setStatus("A");
+            tenant.setCreatedBy("SYSTEM");
+            tenant.setCreatedDate(new Date());
+           if(tenant.getTenantName()!=null){
+            return tenantDetailsRepository.save(tenant);
+           }
+        }catch(Exception e){
+
+        }
+        return tenant ;
     }
 
     public ResponseEntity<Tenant> getTenantById(Long id){

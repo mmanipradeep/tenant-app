@@ -1,0 +1,29 @@
+<div class="col-md-6 offset-md-3">
+    <h3> Update Tenant Details </h3>
+    <form (ngSubmit) = "onSubmit()">
+  
+      <div class="form-group">
+        <label> Tenant Name</label>
+        <input type="text" class ="form-control" id = "tenantName"
+               [(ngModel)] = "tenant.tenantName" name = "tenantName">
+  
+        <label> Advance Amount </label>
+        <input type="text" class ="form-control" id = "advanceAmount"
+               [(ngModel)] = "tenant.advanceAmount" name = "advanceAmount">
+  
+        <label> Monthly Rent </label>
+        <input type="text" class ="form-control" id = "monthlyRent"
+               [(ngModel)] = "tenant.monthlyRent" name = "monthlyRent">
+        <label>Sepeartion Date  </label>
+        <input type="text" class ="form-control" id = "separationDate"
+               [(ngModel)] = "tenant.separationDate" name = "separationDate">
+        <label> Onbaorad Date</label>
+        <input type="text" class ="form-control" id = "onBoardDate"
+               [(ngModel)] = "tenant.onBoardDate" name = "onBoardDate">
+      </div>
+  
+      <button class = "btn btn-success" type ="submit">Submit</button>
+      <button (click)="goBack()"  backButton>BACK</button>
+    </form>
+  </div>
+  

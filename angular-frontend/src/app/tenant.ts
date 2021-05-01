@@ -1,11 +1,11 @@
 export class Tenant {
   id: number;
-  tenantName: String;
+  tenantName: string;
    advanceAmount: number;
    monthlyRent: number;
-   status: String;
+   status: string;
    onBoardDate : Date;
    separationDate : Date ;
-   createdBy : String;
-   createdDate : Date;
+   createdBy : string;
+   createdDate : string;
 }

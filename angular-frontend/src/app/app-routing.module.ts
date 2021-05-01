@@ -4,11 +4,13 @@ import { TenantListComponent } from './tenant-list/tenant-list.component';
 import { CreateTenantComponent } from './create-tenant/create-tenant.component';
 import { TenantDetailsComponent } from './tenant-details/tenant-details.component';
 import { UpdateTenantComponent } from './update-tenant/update-tenant.component';
+import { DeleteTenantComponent } from './delete-tenant/delete-tenant.component';
 const routes: Routes = [
     {path: 'tenants',component : TenantListComponent},
     {path: 'create-tenant', component: CreateTenantComponent},
     {path: 'tenant-details/:id', component: TenantDetailsComponent},
-    {path: 'update-tenant/:id', component: UpdateTenantComponent}
+    {path: 'update-tenant/:id', component: UpdateTenantComponent},
+    {path :'delete-tenant/:id', component : DeleteTenantComponent}
 ];
 
 @NgModule({

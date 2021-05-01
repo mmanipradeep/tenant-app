@@ -4,11 +4,11 @@ import { Tenant } from '../tenant';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
 @Component({
-  selector: 'app-update-tenant',
-  templateUrl: './update-tenant.component.html',
-  styleUrls: ['./update-tenant.component.css']
+  selector: 'app-delete-tenant',
+  templateUrl: './delete-tenant.component.html',
+  styleUrls: ['./delete-tenant.component.css']
 })
-export class UpdateTenantComponent implements OnInit {
+export class DeleteTenantComponent implements OnInit {
 
    id: number;
     tenant: Tenant = new Tenant();
@@ -25,7 +25,7 @@ export class UpdateTenantComponent implements OnInit {
     }
 
     onSubmit(){
-      this.tenantService.updateTenant(this.id, this.tenant).subscribe( data =>{
+      this.tenantService.deleteTenant(this.id, this.tenant).subscribe( data =>{
         this.goToTenantList();
       }
       , error => console.log(error));
