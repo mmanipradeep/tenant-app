@@ -1,0 +1,28 @@
+<h2> Tenant List</h2>
+<table class = "table table-striped">
+  <thead>
+  <tr>
+    <th> Tenant Name</th>
+    <th> Onboard Date</th>
+    <th> Month Rent</th>
+    <th> Advance Amount </th>
+    <th> Separation Date </th>
+    <th> Status </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor = "let tenant of tenants" >
+    <td> {{ tenant.tenantName }} </td>
+  <td> {{ tenant.onBoardDate }} </td>
+   <td> {{ tenant.monthlyRent }} </td>
+    <td> {{ tenant.advanceAmount }} </td>
+    <td> {{ tenant.separationDate }} </td>
+    <td> {{ tenant.status }} </td>
+    <td>
+    <button (click) = "updateTenant(tenant.id)" class = "btn btn-info"> Update</button>
+      <button (click) = "deleteTenant(tenant.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+     <button (click) = "tenantDetails(tenant.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

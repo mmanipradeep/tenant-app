@@ -1,0 +1,29 @@
+<h3> View Tenant Details</h3>
+<div>
+  <div>
+    <label> <b> Tenant Name: </b></label> {{tenant.tenantName}}
+  </div>
+  <div>
+    <label> <b> Onboard Date: </b></label> {{tenant.onBoardDate}}
+  </div>
+  <div>
+    <label> <b> Monthly rent: </b></label> {{tenant.monthlyRent}}
+  </div>
+  <div>
+    <label> <b> Advance Amount : </b></label> {{tenant.advanceAmount}}
+  </div>
+  <div>
+    <label> <b> Separation Date: </b></label> {{tenant.separationDate}}
+  </div>
+
+  <div>
+    <label> <b> Status: </b></label> {{tenant.status}}
+  </div>
+
+<!--  &lt;!&ndash; anchor must be a passive link &ndash;&gt;-->
+<!--  <a href="javascript:void(0)" (click)="goBack()">-->
+<!--    Back-->
+<!--  </a>-->
+
+  <button (click)="goBack()"  backButton>BACK</button>
+</div>

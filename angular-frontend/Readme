@@ -1,0 +1,20 @@
+npm install bootstrap --save
+Updated in package.json
+
+Update npm version -- >  npm install -g npm
+
+Add bootstrap in style.css and index.html
+
+
+ng g class tenant
+--> created tenant spec.ts and tenant.ts
+
+ng g c tenant-list
+--> ccreate compoenent
+
+
+
+chrome.exe --user-data-dir="C:/Chrome dev session" --disable-web-security
+
+
+https://github.com/RameshMF/Angular-10-Spring-Boot-CRUD-Full-Stack-App/tree/master/angular-frontend
